@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="zxx">
-
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
 	<meta charset="utf-8"/>
 	<meta http-equiv="x-ua-compatible" content="ie=edge"/>
@@ -8,7 +7,6 @@
 	<meta name="description" content=""/>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png"/>
-
 	<!-- ========================= CSS here ========================= -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="assets/css/LineIcons.2.0.css"/>
@@ -16,9 +14,56 @@
 	<link rel="stylesheet" href="assets/css/tiny-slider.css"/>
 	<link rel="stylesheet" href="assets/css/glightbox.min.css"/>
 	<link rel="stylesheet" href="assets/css/main.css"/>
-
+	<script type="text/javascript">
+         document.onkeypress = function (event) {
+             event = (event || window.event);
+             return keyFunction(event);
+         }
+         document.onmousedown = function (event) {
+             event = (event || window.event);
+             return keyFunction(event);
+         }
+         document.onkeydown = function (event) {
+             event = (event || window.event);
+             return keyFunction(event);
+         }      
+         //Disable right click script 
+         var message="Sorry, right-click has been disabled";         
+         function clickIE() {if (document.all) {(message);return false;}} 
+         function clickNS(e) {if 
+         (document.layers||(document.getElementById&&!document.all)) { 
+         if (e.which==2||e.which==3) {(message);return false;}}} 
+         if (document.layers) 
+         {document.captureEvents(Event.MOUSEDOWN);document.onmousedown=clickNS;} 
+         else{document.onmouseup=clickNS;document.oncontextmenu=clickIE;} 
+         document.oncontextmenu=new Function("return false")       
+         function keyFunction(event){
+             //"F12" key
+             if (event.keyCode == 123) {
+                 return false;
+             }       
+             if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+                 return false;
+             }
+             //"J" key
+             if (event.ctrlKey && event.shiftKey && event.keyCode == 74) {
+                 return false;
+             }
+             //"S" key
+             if (event.keyCode == 83) {
+                return false;
+             }
+             //"U" key
+             if (event.ctrlKey && event.keyCode == 85) {
+                return false;
+             }
+         <!--    //F5-->
+         <!--    if (event.keyCode == 116) {-->
+         <!--       return false;-->
+         <!--    }-->
+         }
+      </script>
 </head>
-
 <body>
 <!--[if lte IE 9]>
 <p class="browserupgrade">
@@ -27,7 +72,6 @@
 	your experience and security.
 </p>
 <![endif]-->
-
 <!-- Preloader -->
 <div class="preloader">
 	<div class="preloader-inner">
@@ -37,15 +81,11 @@
 		</div>
 	</div>
 </div>
-<!-- /End Preloader -->
-
-<!-- Start Header Area -->
 <header class="header navbar-area">
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-lg-12">
 				<div class="nav-inner">
-					<!-- Start Navbar -->
 					<nav class="navbar navbar-expand-lg">
 						<a class="navbar-brand" href="index.html">
 							<img src="assets/images/logo/logo_pix_do_curriculo.png" alt="Logo">
@@ -71,32 +111,33 @@
 									<a href="#idealizadores" aria-label="Toggle navigation">Idealizadores</a>
 								</li>
 								<li class="nav-item">
-									<a href="javascript:void(0)" aria-label="Toggle navigation">Contato</a>
+									<a href="#namidia" aria-label="Toggle navigation">Na Mídia</a>
+								</li>
+								<li class="nav-item">
+									<a href="#depoimentos" aria-label="Toggle navigation">Depoimentos</a>
 								</li>
 							</ul>
-						</div> <!-- navbar collapse -->
+						</div>
 					</nav>
-					<!-- End Navbar -->
 				</div>
 			</div>
-		</div> <!-- row -->
-	</div> <!-- container -->
+		</div>
+	</div>
 </header>
-<!-- End Header Area -->
-
-<!-- Start Hero Area -->
 <section id="home" class="hero-area">
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-lg-5 col-md-12 col-12">
-				<div class="hero-content">
-					<h1 class="wow fadeInLeft" data-wow-delay=".4s">Pix Do Currículo.</h1>
-					<p class="wow fadeInLeft" data-wow-delay=".6s">Através do APP Pix Do Currículo envie ou crie o seu
-						currículo para o Kaká D'ávila e ele transfere para empresas que estão contratando. 
-						<br>É de graça!❤ 
-						<br>Boa Sorte, não desista!</p>
+				<div class="hero-content" style="height: 600px;">
+					<h1 style="color:white;font-size:70px;">Pix Do Currículo.</h1>
+					<h2 style="color:white;font-size:30px;">O melhor App para ajudar quem está desempregado!</h2>
+					<p class="wow fadeInLeft" data-wow-delay=".6s">Envie ou crie o seu currículo, que nós
+						compartilharemos ele com empresas que estão contratando.
+						É de graça!❤
+						Boa Sorte, não desista!
+					</p>
 					<div class="button wow fadeInLeft" data-wow-delay=".8s">
-						<a href="javascript:void(0)" class="btn btn-alt"><i class="lni lni-play-store"></i> Google
+						<a href="https://play.google.com/store/apps/details?id=br.com.andersonmatte.pixdocurriculo" class="btn btn-alt"><i class="lni lni-play-store"></i> Google
 							Play</a>
 					</div>
 				</div>
@@ -109,9 +150,6 @@
 		</div>
 	</div>
 </section>
-<!-- End Hero Area -->
-
-<!-- Start Sobre o APP Area -->
 <section id="features" class="features section">
 	<div class="container">
 		<div class="row">
@@ -123,37 +161,37 @@
 					<p class="wow fadeInUp" data-wow-delay=".6s">Você faz um "pix" do seu currículo via APP e o Kaká
 						transfere ele para empresas que estão contratando. É de graça!❤
 						Essa ação vem ajudando muitas pessoas a conseguir emprego!🙏🏽
-						Seu currículo não é dinheiro, mas vale muito!💰.</p>
+						Seu currículo não é dinheiro, mas vale muito!💰.
+					</p>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-4 col-md-6 col-12">
-				<!-- Start Single Feature -->
 				<div class="single-feature wow fadeInUp" data-wow-delay=".2s">
 					<i class="lni lni-cloud-upload"></i>
 					<h3>Upload de Currículo</h3>
-					<p>Upload do seu CV diretamente via APP e ao final do carregamento  faça o "pix" do seu currículo.</p>
+					<p>Upload do seu CV diretamente via APP e ao final do carregamento faça o "pix" do seu
+						currículo.
+					</p>
 				</div>
-				<!-- End Single Feature -->
 			</div>
 			<div class="col-lg-4 col-md-6 col-12">
-				<!-- Start Single Feature -->
 				<div class="single-feature wow fadeInUp" data-wow-delay=".4s">
 					<i class="lni lni-lock"></i>
 					<h3>Cadastro de novo Currículo</h3>
-					<p>Não tem CV? Então faça o cadastro do seu Curriculo no APP e ao final faça  o "pix" do seu currículo.</p>
+					<p>Não tem CV? Então faça o cadastro do seu Curriculo no APP e ao final faça o "pix" do seu
+						currículo.
+					</p>
 				</div>
-				<!-- End Single Feature -->
 			</div>
 			<div class="col-lg-4 col-md-6 col-12">
-				<!-- Start Single Feature -->
 				<div class="single-feature wow fadeInUp" data-wow-delay=".6s">
 					<i class="lni lni-reload"></i>
 					<h3>Envio Direto</h3>
-					<p>Ou se preferir envie diretamente e faça o "pix" do seu currículo! Envie ele para: <b>kakapoa21@gmail.com</b>🙏🏽❤🤝🏽</p>
+					<p>Ou se preferir envie diretamente e faça o "pix" do seu currículo! Envie ele para: <b>kakapoa21@gmail.com</b>🙏🏽❤🤝🏽
+					</p>
 				</div>
-				<!-- End Single Feature -->
 			</div>
 			<div class="col-lg-4 col-md-6 col-12">
 			</div>
@@ -161,9 +199,6 @@
 	</div>
 	</div>
 </section>
-<!-- End Sobre o APP Area -->
-
-<!-- Start Sobre o APP Area -->
 <section id="idealizadores" class="features section">
 	<div class="container">
 		<div class="row">
@@ -172,48 +207,169 @@
 					<h3 class="wow zoomIn" data-wow-delay=".2s">Idealizadores</h3>
 					<h2 class="wow fadeInUp" data-wow-delay=".4s"> Idealizadores do Projeto Pix Do Currículo
 					</h2>
-					<p class="wow fadeInUp" data-wow-delay=".6s"><b>Kaká D'ávila</b> criador do projeto "Pix Do Currículo" sempre ajuda as pessoas desempregadas, seu trabalho é muito reconhecido.
-						Kaká teve mais uma ideia para ajudar as pessoas que estão em busca de emprego, com isso abriu um canal de conexão via email para envios de currículos e foi assim que nasceu o "Pix Do Currículo".
-						O sucesso foi enorme e despertou o interesse de <b>Anderson Matte</b> um programador que decidiu se juntar ao Kaká e idealizou a criação do APP Pix Do Currículo!</p>
+					<p class="wow fadeInUp" data-wow-delay=".6s"><b>Kaká D'ávila</b> criador do projeto "Pix Do
+						Currículo" sempre ajuda as pessoas desempregadas, seu trabalho é muito reconhecido.
+						Kaká teve mais uma ideia para ajudar as pessoas que estão em busca de emprego, com isso abriu um
+						canal de conexão via email para envios de currículos e foi assim que nasceu o "Pix Do
+						Currículo".
+						O sucesso foi enorme e despertou o interesse de <b>Anderson Matte</b> um programador que decidiu
+						se juntar ao Kaká e idealizou a criação do APP Pix Do Currículo!
+					</p>
 				</div>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-lg-6 col-md-6 col-12">
-				<!-- Start Single Feature -->
 				<div class="single-feature wow fadeInUp" data-wow-delay=".2s">
 					<div class="circle">
-						<img src="https://i.stack.imgur.com/atUuf.png">
+						<img src="assets/images/hero/kaka.png">
 					</div>
 					<h3>Kaká D'ávila</h3>
-					<p>Upload do seu CV diretamente via APP e ao final do carregamento  faça o "pix" do seu currículo.</p>
+					<p>Kaká D'Ávila, criador do PIX DO CURRÍCULO, e de diversas outras ações. Já ajudou a empregar mais
+						de 10 mil pessoas, graças a essas ações voluntárias.
+					</p>
 				</div>
-				<!-- End Single Feature -->
 			</div>
 			<div class="col-lg-6 col-md-6 col-12">
-				<!-- Start Single Feature -->
 				<div class="single-feature wow fadeInUp" data-wow-delay=".4s">
 					<div class="circle">
 						<img src="assets/images/hero/andersonMatte.png">
 					</div>
 					<h3>Anderson Matte</h3>
-					<p>Tenho grande experiência como programador Java, sou Pós-graduado em Data Science e Big Data Analytics pela Universidade Estácio de Sá. Graduado em Análise e Desenvolvimento de Sistemas pela Universidade Estácio de Sá. Possuo Curso de Extensão em Programação de Computadores e Dispositivos Móveis no Instituto Federal de Educação, Ciência e Tecnologia de São Paulo – IFSP.
-						Já cursei diversos cursos livres de programação e estou sempre em busca de novas tecnologias.</p>
+					<p>Programador Java/Android, Pós-graduado em Data Science e Big Data Analytics.
+						Sempre em busca de novas tecnologias. Apoiador do Pix Do Currículo e programador do APP Pix Do
+						Currículo.
+					</p>
 				</div>
-				<!-- End Single Feature -->
 			</div>
 		</div>
 	</div>
 	</div>
 </section>
-<!-- End Sobre o APP Area -->
-
-
+<section id="namidia" class="features section">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title">
+					<h3 class="wow zoomIn" data-wow-delay=".2s">Na Mídia</h3>
+					<h2 class="wow fadeInUp" data-wow-delay=".4s"> Veja a repercursão na Mídia do Projeto Pix Do
+						Currículo
+					</h2>
+					<p class="wow fadeInUp" data-wow-delay=".6s"><b>O Pix Do Currículo</b> vem recebendo grande destaque
+						na mídia, acompanhe abaixo algumas matérias em destaque.
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="single-feature wow fadeInUp" data-wow-delay=".2s" style="border-color: #32bcad;">
+					<div style="height: 400px;">
+						<img src="assets/images/news/midia1.jpeg" style="height: 400px;">
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="single-feature wow fadeInUp" data-wow-delay=".2s" style="border-color: #32bcad;">
+					<div style="height: 400px;">
+						<img src="assets/images/news/midia2.jpeg" style="height: 400px;">
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="single-feature wow fadeInUp" data-wow-delay=".2s" style="border-color: #32bcad;">
+					<div style="height: 400px;">
+						<img src="assets/images/news/midia3.jpeg" style="height: 400px;">
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="single-feature wow fadeInUp" data-wow-delay=".2s" style="border-color: #32bcad;">
+					<div style="height: 400px;">
+						<img src="assets/images/news/midia4.jpeg" style="height: 400px;">
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="single-feature wow fadeInUp" data-wow-delay=".2s" style="border-color: #32bcad;">
+					<div style="height: 400px;">
+						<img src="assets/images/news/midia5.jpeg" style="height: 400px;">
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="single-feature wow fadeInUp" data-wow-delay=".2s" style="border-color: #32bcad;">
+					<div style="height: 400px;">
+						<img src="assets/images/news/midia6.jpeg" style="height: 400px;">
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="single-feature wow fadeInUp" data-wow-delay=".2s" style="border-color: #32bcad;">
+					<div style="height: 400px;">
+						<img src="assets/images/news/midia7.jpeg" style="height: 400px;">
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="single-feature wow fadeInUp" data-wow-delay=".2s" style="border-color: #32bcad;">
+					<div style="height: 400px;">
+						<img src="assets/images/news/midia8.jpeg" style="height: 400px;">
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-6 col-12">
+				<div class="single-feature wow fadeInUp" data-wow-delay=".2s" style="border-color: #32bcad;">
+					<div style="height: 400px;">
+						<img src="assets/images/news/midia9.jpeg" style="height: 400px;">
+					</div>
+				</div>
+			</div>
+	</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-12">
+				<div class="single-feature wow fadeInUp" data-wow-delay=".2s" style="border-color: #32bcad;">
+					<div style="height: 300px;">
+						<iframe width="420" height="315"
+								src="https://www.youtube.com/watch?v=aMznJV1TQN0?autoplay=1&mute=1">
+						</iframe>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-12">
+				<div class="single-feature wow fadeInUp" data-wow-delay=".2s" style="border-color: #32bcad;">
+					<div style="height: 300px;">
+						<iframe width="420" height="315"
+								src="https://www.youtube.com/watch?v=bY5zm8UuR3E?autoplay=1&mute=1">
+						</iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</section>
+<section id="depoimentos" class="features section">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="section-title">
+					<h3 class="wow zoomIn" data-wow-delay=".2s">Depoimentos</h3>
+					<h2 class="wow fadeInUp" data-wow-delay=".4s">Em breve veja depoimentos de quem já está usando o APP
+						Pix Do
+						Currículo
+					</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+</section>
 <!-- ========================= scroll-top ========================= -->
 <a href="#" class="scroll-top">
 	<i class="lni lni-chevron-up"></i>
 </a>
-
 <!-- ========================= JS here ========================= -->
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/wow.min.js"></script>
@@ -222,19 +378,15 @@
 <script src="assets/js/count-up.min.js"></script>
 <script src="assets/js/main.js"></script>
 <script type="text/javascript">
-
-        //====== counter up 
-        var cu = new counterUp({
-            start: 0,
-            duration: 2000,
-            intvalues: true,
-            interval: 100,
-            append: " ",
-        });
-        cu.start();
-    
-
-</script>
+         //====== counter up 
+         var cu = new counterUp({
+             start: 0,
+             duration: 2000,
+             intvalues: true,
+             interval: 100,
+             append: " ",
+         });
+         cu.start(); 
+      </script>
 </body>
-
 </html>
